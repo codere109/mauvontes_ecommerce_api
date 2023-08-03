@@ -8,13 +8,14 @@ Category.init(
   {
     // define columns
     id: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
+      allowNull: false,
       autoIncrement: true,
       primaryKey: true
     },
 
     category_name:{
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       validate:{
         max: 32,
@@ -22,6 +23,8 @@ Category.init(
 
     }
   },
+
+  
   {
     sequelize,
     timestamps: false,
